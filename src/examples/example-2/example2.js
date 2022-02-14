@@ -15,7 +15,7 @@ exports.validate = (cpf) => {
     }
     const digit1 = calculateCheckDigit(cpf, FACTOR_DIGIT_1);
     const digit2 = calculateCheckDigit(cpf, FACTOR_DIGIT_2);
-    let checkDigit = extractCheckDigit(cpf);
+    const checkDigit = extractCheckDigit(cpf);
     const calculatedDigit = `${digit1}${digit2}`;
     return checkDigit == calculatedDigit;
 }
